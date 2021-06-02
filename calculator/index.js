@@ -257,9 +257,13 @@ class Calculator extends WindowFrame {
     }
 }
 
-AppLauncher.register('Calculator', () => {
-    const window = new Calculator();
-    window.show();
-});
+AppLauncher.register(
+    'Calculator',
+    () => {
+        const window = new Calculator();
+        window.show();
+    },
+    '/Calculator/icon.png'
+);
 
 style('/Calculator/calculator.css');
