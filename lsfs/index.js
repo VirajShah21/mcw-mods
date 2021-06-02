@@ -12,15 +12,6 @@ class IOError extends Error {
  * @class LSFS
  */
 class LSFS {
-    constructor(cwd) {
-        this.cwd = cwd || '/';
-        this.root = LSFS.tree();
-    }
-
-    tree() {
-        return LSFS.ls(this.cwd);
-    }
-
     static tree() {
         return JSON.parse(localStorage.getItem('lsfs'));
     }
